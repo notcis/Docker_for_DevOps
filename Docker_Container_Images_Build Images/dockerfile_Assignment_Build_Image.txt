@@ -2,11 +2,11 @@
 FROM python:latest
 
 # Identify the maintainer of an image
-LABEL version="0.0.1"
-LABEL maitainer="anshulc55@gmail.com"
+LABEL version="0.0.1" \
+      maintainer="notcis07@gmail.com"
 
 # Add Python Script
-ADD my_script.py /
+COPY my_script.py /
 
 # Execute python script
-CMD [ "python", "./my_script.py" ]
+CMD [ "python", "/my_script.py" ]
